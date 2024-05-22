@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "lDBbgZiW8pdCrGGVN+56eJggmY5WDXBmE946UPvzdPdg8Il7HspXNV7VTnNDuJIFu1YTlbD91NgBvHQ71YihMA==",
+  "dgSpecHash": "1amxFkDJo438adGEceXr6VeK3ywQhFr/WwYulFWrMMgj7W4wPyfKX918HuROwv3vHvWLfD456JGqmvzket3t3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Proyectos\\Desktop\\Proyectos\\Katas\\Katas\\Katas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Proyectos\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\Proyectos\\.nuget\\packages\\fluentassertions\\7.0.0-alpha.3\\fluentassertions.7.0.0-alpha.3.nupkg.sha512",
     "C:\\Users\\Proyectos\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
     "C:\\Users\\Proyectos\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
     "C:\\Users\\Proyectos\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
@@ -16,7 +17,9 @@
     "C:\\Users\\Proyectos\\.nuget\\packages\\nunit\\3.14.0\\nunit.3.14.0.nupkg.sha512",
     "C:\\Users\\Proyectos\\.nuget\\packages\\nunit.analyzers\\3.9.0\\nunit.analyzers.3.9.0.nupkg.sha512",
     "C:\\Users\\Proyectos\\.nuget\\packages\\nunit3testadapter\\4.5.0\\nunit3testadapter.4.5.0.nupkg.sha512",
-    "C:\\Users\\Proyectos\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
+    "C:\\Users\\Proyectos\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\Proyectos\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
+    "C:\\Users\\Proyectos\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
   ],
   "logs": []
 }
