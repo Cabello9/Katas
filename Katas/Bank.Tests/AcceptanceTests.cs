@@ -30,7 +30,7 @@ public class AcceptanceTests
     public void DepositTwice()
     {
         var timeServiceMock = Substitute.For<TimeService>();
-        timeServiceMock.Now.ReturnsForAnyArgs(23.May(2024));
+        timeServiceMock.Now.ReturnsForAnyArgs(23.May(2024), 25.May(2024));
         var sut = new AccountServiceImpl(new(), timeServiceMock);
         
         sut.Deposit(500);
@@ -38,13 +38,14 @@ public class AcceptanceTests
         
         sut.Statement.Should().HaveCount(2);
         sut.Statement[0].Should().Be("23/05/2024 || 500 || 500");
-        sut.Statement[1].Should().Be("23/05/2024 || 300 || 800");
+        sut.Statement[1].Should().Be("25/05/2024 || 300 || 800");
     }
     
     [Test, Ignore("")]
     public void PrintBankStatement()
     {
-        var sut = new AccountServiceImpl(new(), Substitute.For<TimeService>());
+        var timeService = Substitute.For<TimeService>();
+        var sut = new AccountServiceImpl(new(), timeService);
         sut.Deposit(1000);
         sut.Deposit(2000);
         sut.Withdraw(500);
