@@ -7,7 +7,7 @@ public struct Transaction
     
     public override string ToString()
     {
-        return $"{When.ToShortDateString()} || {Amount.ToString()}";
+        return $"{When:dd/MM/yyyy} || {Amount.ToString()}";
     }
 }
 
