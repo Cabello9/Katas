@@ -7,6 +7,6 @@ public readonly struct Transaction
     
     public override string ToString()
     {
-        return $"{When:dd/MM/yyyy} || {Amount.ToString()} || {Amount.ToString()}";
+        return $"{When:dd/MM/yyyy} || {Amount.ToString()}";
     }
 }

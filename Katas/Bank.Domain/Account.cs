@@ -3,15 +3,17 @@
 public class Account
 {
     List<Transaction> Movements { get; } = [];
-    
-    public int CurrentBalance()
+
+    public IEnumerable<string> Statements()
     {
-        throw new NotImplementedException();
+        var balance = 0;
+        foreach(var transaction in Movements)
+        {
+            balance += transaction.Amount;
+            yield return transaction+$" || {balance}";
+        }
     }
 
-    public List<string> Statements()
-        => Movements.Select(m => m.ToString()).ToList();
-    
     public void Register(Transaction transaction)
         => Movements.Add(transaction);
 }
