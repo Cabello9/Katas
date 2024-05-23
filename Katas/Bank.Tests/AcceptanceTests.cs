@@ -12,6 +12,17 @@ public class AcceptanceTests
     }
     
     [Test]
+    public void Deposit()
+    {
+        var sut = new Account();
+        
+        sut.Deposit(500);
+        
+        sut.Statement.Should().HaveCount(1);
+        sut.Statement[0].Should().Be("500");
+    }
+    
+    [Test]
     public void PrintBankStatement()
     {
         var sut = new Account();

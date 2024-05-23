@@ -6,7 +6,7 @@ public class Account : AccountService
     
     public void Deposit(int amount)
     {
-        throw new NotImplementedException();
+        Statement.Add(amount.ToString());
     }
 
     public void Withdraw(int amount)
