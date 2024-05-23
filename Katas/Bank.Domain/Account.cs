@@ -1,14 +1,29 @@
 ﻿namespace Bank.Domain;
 
+public struct Transaction
+{
+    public int Amount { get; init; }
+    public DateTime When { get; init; }
+    
+    public override string ToString()
+    {
+        return $"{When.ToShortDateString()} || {Amount.ToString()}";
+    }
+}
+
 public class Account : AccountService
 {
     DateTime date { get; } = DateTime.Now.Date;
     
-    public List<string> Statement { get; } = [];
+    public List<Transaction> Statement { get; } = [];
     
     public void Deposit(int amount)
     {
-        Statement.Add($"{date.ToShortDateString()} || {amount.ToString()}");
+        Statement.Add(new Transaction
+        {
+            Amount = amount,
+            When = date
+        });
     }
 
     public void Withdraw(int amount)

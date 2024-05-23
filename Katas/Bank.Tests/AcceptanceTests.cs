@@ -19,7 +19,7 @@ public class AcceptanceTests
         sut.Deposit(500);
         
         sut.Statement.Should().HaveCount(1);
-        sut.Statement[0].Should().Be("23/05/2024 || 500");
+        sut.Statement[0].ToString().Should().Be("23/05/2024 || 500");
     }
     
     [Test, Ignore("")]
