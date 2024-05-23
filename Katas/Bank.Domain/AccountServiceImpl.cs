@@ -29,7 +29,11 @@ public class AccountServiceImpl : AccountService
 
     public void Withdraw(int amount)
     {
-        throw new NotImplementedException();
+        account.Register(new Transaction
+        {
+            Amount = -amount,
+            When = timeService.Now
+        });
     }
 
     public void PrintStatement()

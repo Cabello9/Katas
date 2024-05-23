@@ -41,7 +41,7 @@ public class AcceptanceTests
         sut.Statement[1].Should().Be("23/05/2024 || 500 || 500");
     }
     
-    [Test, Ignore("")]
+    [Test]
     public void PrintBankStatement()
     {
         var timeService = Substitute.For<TimeService>();
