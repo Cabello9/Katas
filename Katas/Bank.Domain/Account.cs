@@ -4,17 +4,17 @@ public class Account : AccountService
 {
     public List<string> Statement { get; }
     
-    public void deposit(int amount)
+    public void Deposit(int amount)
     {
         throw new NotImplementedException();
     }
 
-    public void withdraw(int amount)
+    public void Withdraw(int amount)
     {
         throw new NotImplementedException();
     }
 
-    public void printStatement()
+    public void PrintStatement()
     {
         throw new NotImplementedException();
     }

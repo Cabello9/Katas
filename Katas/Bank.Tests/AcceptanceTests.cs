@@ -9,10 +9,10 @@ public class AcceptanceTests
     public void PrintBankStatement()
     {
         var sut = new Account();
-        sut.deposit(1000);
-        sut.deposit(2000);
-        sut.withdraw(500);
-        sut.printStatement();
+        sut.Deposit(1000);
+        sut.Deposit(2000);
+        sut.Withdraw(500);
+        sut.PrintStatement();
 
         sut.Statement.Should().HaveCount(3);
         sut.Statement[0].Should().Be("14/01/2012 || -500 || 2500");
