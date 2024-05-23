@@ -2,7 +2,7 @@
 
 public class Account : AccountService
 {
-    public List<string> Statement { get; }
+    public List<string> Statement { get; } = [];
     
     public void Deposit(int amount)
     {

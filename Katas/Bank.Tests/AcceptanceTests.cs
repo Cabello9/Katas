@@ -6,6 +6,12 @@ namespace Bank.Tests;
 public class AcceptanceTests
 {
     [Test]
+    public void NewAccount_HasEmptyStatement()
+    {
+        new Account().Statement.Should().BeEmpty();
+    }
+    
+    [Test]
     public void PrintBankStatement()
     {
         var sut = new Account();
