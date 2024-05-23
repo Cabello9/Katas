@@ -2,11 +2,13 @@
 
 public class Account : AccountService
 {
+    DateTime date { get; } = DateTime.Now.Date;
+    
     public List<string> Statement { get; } = [];
     
     public void Deposit(int amount)
     {
-        Statement.Add(amount.ToString());
+        Statement.Add($"{date.ToShortDateString()} || {amount.ToString()}");
     }
 
     public void Withdraw(int amount)
