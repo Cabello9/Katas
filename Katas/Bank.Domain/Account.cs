@@ -11,18 +11,23 @@ public struct Transaction
     }
 }
 
-public class Account : AccountService
+public interface TimeService
 {
-    DateTime date { get; } = DateTime.Now.Date;
+    public DateTime Now { get; }
+}
+
+public class Account(TimeService timeService) : AccountService
+{
+    readonly TimeService timeService = timeService;
     
     public List<Transaction> Statement { get; } = [];
-    
+
     public void Deposit(int amount)
     {
         Statement.Add(new Transaction
         {
             Amount = amount,
-            When = date
+            When = timeService.Now
         });
     }
 

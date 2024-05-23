@@ -1,5 +1,7 @@
 ﻿using Bank.Domain;
 using FluentAssertions;
+using FluentAssertions.Extensions;
+using NSubstitute;
 
 namespace Bank.Tests;
 
@@ -8,13 +10,15 @@ public class AcceptanceTests
     [Test]
     public void NewAccount_HasEmptyStatement()
     {
-        new Account().Statement.Should().BeEmpty();
+        new Account(Substitute.For<TimeService>()).Statement.Should().BeEmpty();
     }
     
     [Test]
     public void Deposit()
     {
-        var sut = new Account();
+        var timeServiceMock = Substitute.For<TimeService>();
+        timeServiceMock.Now.ReturnsForAnyArgs(23.May(2024));
+        var sut = new Account(timeServiceMock);
         
         sut.Deposit(500);
         
@@ -25,7 +29,7 @@ public class AcceptanceTests
     [Test, Ignore("")]
     public void PrintBankStatement()
     {
-        var sut = new Account();
+        var sut = new Account(Substitute.For<TimeService>());
         sut.Deposit(1000);
         sut.Deposit(2000);
         sut.Withdraw(500);
