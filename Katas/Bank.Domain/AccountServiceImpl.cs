@@ -16,7 +16,7 @@ public class AccountServiceImpl : AccountService
         this.timeService = timeService;
     }
 
-    public List<string> Statement => account.Statements().ToList();
+    public List<string> Statement => account.Statements().Reverse().ToList();
 
     public void Deposit(int amount)
     {

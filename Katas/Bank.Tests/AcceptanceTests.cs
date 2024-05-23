@@ -37,19 +37,19 @@ public class AcceptanceTests
         sut.Deposit(300);
         
         sut.Statement.Should().HaveCount(2);
-        sut.Statement[0].Should().Be("23/05/2024 || 500 || 500");
-        sut.Statement[1].Should().Be("25/05/2024 || 300 || 800");
+        sut.Statement[0].Should().Be("25/05/2024 || 300 || 800");
+        sut.Statement[1].Should().Be("23/05/2024 || 500 || 500");
     }
     
     [Test, Ignore("")]
     public void PrintBankStatement()
     {
         var timeService = Substitute.For<TimeService>();
+        timeService.Now.ReturnsForAnyArgs(10.January(2012), 13.January(2012), 14.January(2012));
         var sut = new AccountServiceImpl(new(), timeService);
         sut.Deposit(1000);
         sut.Deposit(2000);
         sut.Withdraw(500);
-        sut.PrintStatement();
 
         sut.Statement.Should().HaveCount(3);
         sut.Statement[0].Should().Be("14/01/2012 || -500 || 2500");
