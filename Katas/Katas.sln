@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Tests", "Bank.Tests\Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.Domain", "Bank.Domain\Bank.Domain.csproj", "{AF19C6D6-F4DF-4BFD-8A79-9E91DE393DC5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cupcakes", "Cupcakes", "{BAF7F410-25DD-4452-8EA9-A2814A9E5A1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cupcake.Tests", "Cupcake.Tests\Cupcake.Tests.csproj", "{8D6BEB9A-8900-43F7-B856-D1B37B7BD0FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +24,14 @@ Global
 		{AF19C6D6-F4DF-4BFD-8A79-9E91DE393DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF19C6D6-F4DF-4BFD-8A79-9E91DE393DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF19C6D6-F4DF-4BFD-8A79-9E91DE393DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D6BEB9A-8900-43F7-B856-D1B37B7BD0FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D6BEB9A-8900-43F7-B856-D1B37B7BD0FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D6BEB9A-8900-43F7-B856-D1B37B7BD0FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D6BEB9A-8900-43F7-B856-D1B37B7BD0FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9C1867D9-82C9-45D0-AC5B-9F4C03077373} = {D8C347D8-86AB-4030-B71C-CC6AE8323B15}
 		{AF19C6D6-F4DF-4BFD-8A79-9E91DE393DC5} = {D8C347D8-86AB-4030-B71C-CC6AE8323B15}
+		{8D6BEB9A-8900-43F7-B856-D1B37B7BD0FA} = {BAF7F410-25DD-4452-8EA9-A2814A9E5A1D}
 	EndGlobalSection
 EndGlobal
