@@ -1,5 +1,5 @@
-using CupcakeKata.Domain;
 using FluentAssertions;
+using static CupcakeKata.Domain.Cake;
 
 namespace CupcakeKata.Tests;
 
@@ -8,19 +8,19 @@ public class CakeShould
     [Test]
     public void Be_ACupcake()
     {
-        Cake.Cupcake().Name.Should().Be("Cupcake");
+        Cupcake().Name.Should().Be("Cupcake");
     }
 
     [Test]
     public void Be_ACookie()
     {
-        Cake.Cookie().Name.Should().Be("Cookie");
+        Cookie().Name.Should().Be("Cookie");
     }
 
     [Test]
     public void Cookie_HigherPrice_ThanCupcake()
     {
-        throw new NotImplementedException();
+        Cookie().Price.Should().BeGreaterThan(Cupcake().Price);
     }
     
     [Test]
