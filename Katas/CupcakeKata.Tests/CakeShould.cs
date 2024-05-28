@@ -8,16 +8,19 @@ public class CakeShould
     [Test]
     public void Be_ACupcake()
     {
-        var sut = Cake.Cupcake();
-
-        sut.Name.Should().Be("Cupcake");
+        Cake.Cupcake().Name.Should().Be("Cupcake");
     }
 
     [Test]
     public void Be_ACookie()
     {
-        var sut = Cake.Cookie();
-        sut.Name.Should().Be("Cookie");
+        Cake.Cookie().Name.Should().Be("Cookie");
+    }
+
+    [Test]
+    public void Cookie_HigherPrice_ThanCupcake()
+    {
+        throw new NotImplementedException();
     }
     
     [Test]
