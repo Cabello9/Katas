@@ -22,7 +22,27 @@ public class CakeShould
     {
         Cookie().Price.Should().BeGreaterThan(Cupcake().Price);
     }
-    
+
+    [Test]
+    public void HaveChocolate()
+    {
+        var cupcake = Chocolate(Cupcake());
+        var cookie = Chocolate(Cookie());
+
+        cupcake.Name.Should().Be("Cupcake with Chocolate");
+        cookie.Name.Should().Be("Cookie with Chocolate");
+    }
+
+    [Test]
+    public void SumPriceOfChocolateTopping()
+    {
+        var cupcake = Chocolate(Cupcake());
+        var cookie = Chocolate(Cookie());
+
+        cupcake.Price.Should().Be(1.1f);
+        cookie.Price.Should().Be(2.1f);
+    }
+
     [Test]
     public void Print_InOrder()
     {
