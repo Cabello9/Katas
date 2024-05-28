@@ -32,6 +32,16 @@ public class CakeShould
         cupcake.Name.Should().Be("Cupcake with Chocolate");
         cookie.Name.Should().Be("Cookie with Chocolate");
     }
+    
+    [Test]
+    public void HavePeanut()
+    {
+        var cupcake = Peanut(Cupcake());
+        var cookie = Peanut(Cookie());
+
+        cupcake.Name.Should().Be("Cupcake with Peanut");
+        cookie.Name.Should().Be("Cookie with Peanut");
+    }
 
     [Test]
     public void SumPriceOfChocolateTopping()
@@ -42,13 +52,30 @@ public class CakeShould
         cupcake.Price.Should().Be(1.1f);
         cookie.Price.Should().Be(2.1f);
     }
-
+    
     [Test]
-    public void Print_InOrder()
+    public void HaveChocolateAndPeanut()
     {
-        //var sut = Sugar(Nuts(Chocolate(Cupcake())));
+        var cupcake = Peanut(Chocolate(Cupcake()));
 
-        //sut.Name.Should().Be("");
-        Assert.Fail();
+        cupcake.Name.Should().Be("Cupcake with Chocolate and Peanut");
+    }
+    
+    [Test]
+    public void HavePeanutAndChocolate()
+    {
+        var cupcake = Chocolate(Peanut(Cupcake()));
+
+        cupcake.Name.Should().Be("Cupcake with Peanut and Chocolate");
+    }
+    
+    [Test]
+    public void SumPriceOfAllToppings()
+    {
+        var cupcake = Peanut(Chocolate(Cupcake()));
+        var reversedCupcake = Chocolate(Peanut(Cupcake()));
+
+        cupcake.Price.Should().Be(1.3f);
+        reversedCupcake.Price.Should().Be(1.3f);
     }
 }
